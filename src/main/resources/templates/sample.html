@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>サンプル</title>
+</head>
+<body>
+<form th:id="searchForm" th:object="${sampleForm}">
+  <label>code</label>
+  <input type="text" th:field="*{code}"><br>
+</form>
+<button th:id="searchBtn">検索</button><br>
+<button th:id="searchBtn2">検索（json）</button><br>
+<button th:id="searchBtn3 ">ページング（json)</button><br>
+<button th:id="searchBtn4">検索（innerHtml）</button><br>
+
+<div th:id="test" th:insert="~{data :: displayData }"></div>
+
+<script th:src="@{/js/sample.js}"></script>
+</body>
+</html>
